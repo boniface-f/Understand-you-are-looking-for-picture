@@ -1,4 +1,4 @@
-# Understand-you-are-looking-for-picture（懂你找图）
+# my-project01
 
 ## Project setup
 ```
@@ -7,7 +7,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run dev:mp-weixin    
+npm run serve
 ```
 
 ### Compiles and minifies for production

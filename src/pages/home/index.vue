@@ -37,7 +37,7 @@
 					{title:"推荐"},
 					{title:"分类"},
 					{title:"最新"},
-					{title:"专辑	"}
+					{title:"专辑"}
 				],
 				current: 0
 			}
@@ -55,14 +55,6 @@
 							this.current = e.currentIndex;
 					}
 			}
-		},
-		onLoad(){
-			this.request({
-				url:"http://157.122.54.189:9088/image/v3/homepage/vertical",
-			})
-			.then(res=>{
-				console.log(res)
-			})
 		}
 	}
 </script>
