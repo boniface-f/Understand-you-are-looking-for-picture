@@ -3,36 +3,19 @@
     scroll-y
     @scrolltolower="handleToLower"
     class="recommend_view">
-		<!--推荐-->
-                <!-- <view class="recommend_wrap">
-            <view class="items"
+	<!-- 推荐-->
+        <view class="recommend_wrap">
+            <navigator class="items"
             v-for="item in recommends"
             :key="item.id"
+            :url="`/pages/album/index?id=${item.target}`"
             >
                 <img  mode="widthFix" :src="item.thumb">
-            </view>
-        </view> -->
-
-        <view class="uni-padding-wrap">
-            <view class="page-section swiper">
-                <view class="page-section-spacing">
-                    <swiper class="swiper" circular="true" :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval" :duration="duration">
-                        <view class="recommend_wrap">
-                            <view class="items"
-                            v-for="item in recommends"
-                            :key="item.id"
-                            >
-                                <swiper-item>
-                                    <img mode="hightFix" :src="item.thumb" style="height:300rpx"/>
-                                </swiper-item> 
-                            </view> 
-                        </view>
-                    </swiper>
-                </view>
-            </view>
+            </navigator>
         </view>
+
         
-        <!-- 日期 -->
+    <!-- 日期 -->
         <view class="monthes_wrap">
             <view class="momthe_bar">
                 <view class="month">
@@ -40,7 +23,7 @@
                 {{monthes.MM}} 月
                 </view>
                 <view class="info">
-                   {{monthes.title}}
+                    {{monthes.title}}
                 </view>
                 <view class="more_have">
                     更多>
@@ -97,11 +80,7 @@
                     // 要跳过几条
                     skip: 0
                     },
-                moreDate: true,
-                indicatorDots: true,
-                autoplay: true,
-                interval: 2000,
-                duration: 500
+                moreDate: true
             }
         },
         mounted() {
@@ -147,7 +126,7 @@
 .recommend_view{
     height: calc(100vh - 36px);
 }
-.recommend_wrap1 {
+.recommend_wrap{
     display: flex;
     flex-wrap: wrap;
   .items {

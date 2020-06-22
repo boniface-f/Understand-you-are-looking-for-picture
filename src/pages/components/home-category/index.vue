@@ -9,6 +9,9 @@
 		data() {
 			return {
 			}
+		},
+		mounted(){
+			uni.setNavigationBarTitle({title:"分类"})
 		}
 	}
 </script>
