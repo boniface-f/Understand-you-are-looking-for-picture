@@ -32,13 +32,15 @@
             <view class="monthes_content">
                 <view
                     class="monthes_item"
-                    v-for="(item) in monthes.items"
+                    v-for="(item,index) in monthes.items"
                     :key="item.id"  
                 >
-                    <image
-                    mode="aspectFill"
-                    :src="item.thumb+item.rule.replace('$<Height>',360)"
-                    ></image>
+                    <go-detail :list="monthes.items" :index="index">
+                        <image
+                        mode="aspectFill"
+                        :src="item.thumb+item.rule.replace('$<Height>',360)"
+                        ></image>
+                    </go-detail>
                 </view>
             </view>
         </view>
@@ -50,13 +52,15 @@
             <view class="hots_content">
                 <view
                 class="hot_item"
-                v-for="(item) in hots"
+                v-for="(item,index) in hots"
                 :key="item.id"
                 >
-                <image
-                    mode="widthFix"
-                    :src="item.thumb"
-                ></image>
+                    <go-detail :list="hots" :index="index">
+                        <image
+                        mode="widthFix"
+                        :src="item.thumb"
+                        ></image>
+                    </go-detail>   
                 </view>
             </view>
         </view>
@@ -66,6 +70,7 @@
 
 <script>
     import moment from "moment";
+    import goDetail from "../../components/go-detail/index.vue"
     export default {
         data() {
             return {
@@ -118,6 +123,9 @@
                     });
                 }
             }
+        },
+        components:{
+            goDetail
         }
     }
 </script>

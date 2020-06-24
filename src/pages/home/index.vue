@@ -46,7 +46,7 @@
 					{title:"最新"},
 					{title:"专辑"}
 				],
-				current: 3
+				current: 0
 			}
 		},
 		components:{

@@ -2,12 +2,12 @@
 
 ## Project setup
 ```
-npm install
+cnpm install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+cnpm run dev:mp-weixin
 ```
 
 ### Compiles and minifies for production
