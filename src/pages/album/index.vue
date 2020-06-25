@@ -23,7 +23,6 @@
         <view class="author_name">{{album.user.name}}</view>
       </view>
       <view class="album_author_desc">
-        <!-- text 使用 b站  -->
         <text>{{album.desc}}</text>
       </view>
     </view>
@@ -36,11 +35,12 @@
         v-for="(item,index) in wallpaper"
         :key="item.id"
       >
-      <go-detail :list="wallpaper" :index="index">
-        <image
-          mode="aspectFill"
-          :src="item.thumb+item.rule.replace('$<Height>',360)"
-        ></image>
+        <go-detail :list="wallpaper" :index="index">
+          <image
+            mode="aspectFill"
+            :src="item.thumb+item.rule.replace('$<Height>',360)"
+
+          ></image>
         </go-detail>
       </view>
     </view>
@@ -49,6 +49,7 @@
 </template>
 
 <script>
+import goDetail from "../components/go-detail/index.vue"
 export default {
   data() {
     return {
@@ -65,6 +66,9 @@ export default {
       wallpaper: [],
       hasMore: true
     };
+  },
+  components:{
+    goDetail
   },
   onLoad(options) {
     // console.log(options);
