@@ -17,7 +17,7 @@
 
     <view class="thumb">
       <swiper-action @swiperAction="handleSwiperAction">
-        <img :src="imgDetail.thumb" alt="">
+        <img :src="imgDetail.thumb" mode="aspctFix">
       </swiper-action>
     </view>
 
@@ -144,6 +144,12 @@
         </view>
       </view>
     </view>
+
+    <view class="download_wrap">
+      <view class="download" @click="downloadHandle">
+        下载图片
+      </view>
+    </view>
   
 
   </viwe>
@@ -201,6 +207,20 @@ export default {
           icon: "none"
         });
       }
+    },
+    async downloadHandle() {
+
+
+    await uni.showLoading({
+      title:"下载中"
+    })
+    const result1 = await uni.downloadFile({ url: this.imgDetail.img });
+    const { tempFilePath } = result1[1];
+    const result2 = await uni.saveImageToPhotosAlbum({ filePath: tempFilePath });
+    uni.hideLoading();
+    await uni.showToast({
+      title:"下载成功"
+    })
     }
   },
   components:{
@@ -230,6 +250,13 @@ view.user {
       color: gray;
     }
   }
+}
+.thumb{
+  image {
+    width: 100%;
+    border-bottom: 2rpx solid #666;
+  }
+
 }
 .user_rank {
   display: flex;
@@ -388,6 +415,23 @@ view.user {
   }
 }
 
-// 下载
 
+// 下载
+.download_wrap{
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .download {
+    width: 90%;
+    height: 80%;
+    background-color: $color;
+    color: white;
+    font-size: 50rpx;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 </style>
