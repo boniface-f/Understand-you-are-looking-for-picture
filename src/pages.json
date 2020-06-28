@@ -13,6 +13,12 @@
 			}
 		},
 		{
+			"path": "pages/category/index",
+			"style": {
+				"navigationBarTitleText": "分类"
+			}
+		},
+		{
 			"path": "pages/album/index",
 			"style": {
 				"navigationBarTitleText": "专辑详情"

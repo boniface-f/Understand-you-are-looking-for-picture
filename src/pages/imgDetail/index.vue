@@ -17,7 +17,7 @@
 
     <view class="thumb">
       <swiper-action @swiperAction="handleSwiperAction">
-        <img :src="imgDetail.thumb" mode="aspctFix">
+        <img :src="imgDetail.thumb" mode="widthFix">
       </swiper-action>
     </view>
 
@@ -230,22 +230,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-view.user {
+.user {
   display: flex;
   padding: 20rpx;
-  view.uers_icon {
+  .uers_icon {
       padding: 0rpx 20rpx;
     image {
       width: 80rpx;
       border-radius: 50%;
     }
   }
-  view.user_info {
+  .user_info {
     view.user_name {
       color:black;
       font-size: 36rpx;
     }
-    view.time {
+    .time {
       font-size: 28rpx;
       color: gray;
     }
@@ -254,6 +254,7 @@ view.user {
 .thumb{
   image {
     width: 100%;
+    // height: 100%;
     border-bottom: 2rpx solid #666;
   }
 
