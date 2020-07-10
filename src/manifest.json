@@ -1,9 +1,9 @@
 {
     "name" : "找图",
     "appid" : "__UNI__46740B5",
-    "description" : "",
-    "versionName" : "1.0.1",
-    "versionCode" : 2,
+    "description" : "一个找图软件",
+    "versionName" : "开发板1.0.3",
+    "versionCode" : 3,
     "transformPx" : false,
     "app-plus" : {
         /* 5+App特有相关 */
@@ -84,11 +84,13 @@
             },
             "splashscreen" : {
                 "android" : {
-                    "hdpi" : "C:/Users/boniface/Desktop/启动.png"
+                    "hdpi" : "C:/Users/boniface/Desktop/启动图.png",
+                    "xxhdpi" : "C:/Users/boniface/Desktop/ls.png"
                 },
                 "ios" : {
                     "iphone" : {
-                        "portrait-896h@3x" : "C:/Users/boniface/Desktop/启动.png"
+                        "portrait-896h@3x" : "C:/Users/boniface/Desktop/启动图.png",
+                        "retina55l" : "C:/Users/boniface/Desktop/启动图.png"
                     }
                 }
             }

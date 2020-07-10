@@ -19,3 +19,8 @@ image{
   width: 100%;
   display: block;
 }
+template{
+  width: 100vw;
+  width: 750rpx;
+  width: 100%;
+}
